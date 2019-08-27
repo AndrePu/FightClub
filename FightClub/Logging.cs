@@ -21,8 +21,7 @@ namespace FightClub
 
         public void Write(string text)
         {
-            logging_textBox.Text += String.Format("{0}: {1}", DateTime.Now.ToLongTimeString(), text);
-            logging_textBox.Text += "\r\n\n\n\n";
+            logging_textBox.AppendText(String.Format("{0}: {1}\r\n", DateTime.Now.ToLongTimeString(), text));
         }
 
         public void Write(string player_name, int hp)

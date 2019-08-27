@@ -12,12 +12,12 @@ namespace FightClub
         public Player Defender { get; private set; }
         public Player Attacker { get; private set; }
 
-        public int RoundNumber { get; private set; }
+
+        public int RoundNumber { get; private set; } = 1;
+
 
         public Round(Player player1, Player player2)
         {
-            RoundNumber = 1;
-
             Random random = new Random();
 
             int number = random.Next(0, 1);
@@ -40,7 +40,7 @@ namespace FightClub
 
             SwapFightersRoles();
         }
-
+        
         private void SwapFightersRoles()
         {
             Player player = Defender;

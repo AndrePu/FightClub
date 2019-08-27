@@ -22,15 +22,17 @@ namespace FightClub
         private void start_button_Click(object sender, EventArgs e)
         {
             string player_name = name_textBox.Text;
+
+
             if (player_name == String.Empty)
             {
                 errorLabel.Visible = true;
                 this.ActiveControl = name_textBox;
+
                 return;
             }
 
-            Fight fight = new Fight(player_name);
-
+            var fight = new Fight(player_name);
 
             fight.Show();
             this.Hide();

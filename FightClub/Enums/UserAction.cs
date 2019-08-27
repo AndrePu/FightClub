@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FightClub
 {
-    public enum KindOfAction
+    public enum UserAction
     {
         Attack,
         Defense

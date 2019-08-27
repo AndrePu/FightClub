@@ -11,32 +11,32 @@ using Fighters;
 
 namespace FightClub
 {   
-    public partial class CyberAction : Form
+    public partial class UserActionForm : Form
     {
-        private KindOfAction actionKind;
-        private ActionChoose actionChosen;
-        public KindOfAction ActionKind
+        private UserAction userAction;
+        private ActionChoice actionChosen;
+        public UserAction UserAction
         {
             get
             {
-                return actionKind;
+                return userAction;
             }
             set
             {
-                if (value == KindOfAction.Attack)
+                if (value == UserAction.Attack)
                 {
-                    main_label.Text = "Choose a way to attack another hacker:";
+                    main_label.Text = "Attack";
                 }
                 else
                 {
-                    main_label.Text = "Choose a way to defend against another hacker:";
+                    main_label.Text = "Defend";
                 }
-                actionKind = value;
+                userAction = value;
             }
         }
         public CyberAttack cyberAction { get; private set; }
 
-        internal CyberAction(ActionChoose actionChoose)
+        internal UserActionForm(ActionChoice actionChoose)
         {
             InitializeComponent();
 

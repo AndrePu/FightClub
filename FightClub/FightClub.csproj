@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionKind\KindOfAction.cs" />
-    <Compile Include="CyberAction.cs">
+    <Compile Include="Classes\Bot.cs" />
+    <Compile Include="Enums\UserAction.cs" />
+    <Compile Include="UserActionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CyberAction.Designer.cs">
-      <DependentUpon>CyberAction.cs</DependentUpon>
+    <Compile Include="UserActionForm.Designer.cs">
+      <DependentUpon>UserActionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Fight.cs">
       <SubType>Form</SubType>
@@ -74,8 +75,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Round.cs" />
-    <EmbeddedResource Include="CyberAction.resx">
-      <DependentUpon>CyberAction.cs</DependentUpon>
+    <EmbeddedResource Include="UserActionForm.resx">
+      <DependentUpon>UserActionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fight.resx">
       <DependentUpon>Fight.cs</DependentUpon>
@@ -113,6 +114,9 @@
       <Project>{d9dc434f-522f-4520-8d64-071890248dc4}</Project>
       <Name>Fighters</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

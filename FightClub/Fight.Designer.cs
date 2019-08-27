@@ -50,10 +50,10 @@
             // 
             this.player1_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.player1_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("player1_pictureBox.Image")));
-            this.player1_pictureBox.Location = new System.Drawing.Point(72, 67);
+            this.player1_pictureBox.Location = new System.Drawing.Point(31, 70);
             this.player1_pictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.player1_pictureBox.Name = "player1_pictureBox";
-            this.player1_pictureBox.Size = new System.Drawing.Size(250, 250);
+            this.player1_pictureBox.Size = new System.Drawing.Size(275, 262);
             this.player1_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player1_pictureBox.TabIndex = 0;
             this.player1_pictureBox.TabStop = false;
@@ -61,10 +61,10 @@
             // player2_pictureBox
             // 
             this.player2_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("player2_pictureBox.Image")));
-            this.player2_pictureBox.Location = new System.Drawing.Point(418, 67);
+            this.player2_pictureBox.Location = new System.Drawing.Point(412, 70);
             this.player2_pictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.player2_pictureBox.Name = "player2_pictureBox";
-            this.player2_pictureBox.Size = new System.Drawing.Size(250, 250);
+            this.player2_pictureBox.Size = new System.Drawing.Size(275, 262);
             this.player2_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player2_pictureBox.TabIndex = 1;
             this.player2_pictureBox.TabStop = false;
@@ -73,10 +73,10 @@
             // 
             this.player1_progressBar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.player1_progressBar.ForeColor = System.Drawing.SystemColors.Info;
-            this.player1_progressBar.Location = new System.Drawing.Point(72, 325);
+            this.player1_progressBar.Location = new System.Drawing.Point(31, 341);
             this.player1_progressBar.Margin = new System.Windows.Forms.Padding(4);
             this.player1_progressBar.Name = "player1_progressBar";
-            this.player1_progressBar.Size = new System.Drawing.Size(250, 38);
+            this.player1_progressBar.Size = new System.Drawing.Size(275, 22);
             this.player1_progressBar.Step = 1;
             this.player1_progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.player1_progressBar.TabIndex = 2;
@@ -86,10 +86,10 @@
             // 
             this.player2_progressBar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.player2_progressBar.ForeColor = System.Drawing.SystemColors.Info;
-            this.player2_progressBar.Location = new System.Drawing.Point(418, 325);
+            this.player2_progressBar.Location = new System.Drawing.Point(412, 341);
             this.player2_progressBar.Margin = new System.Windows.Forms.Padding(4);
             this.player2_progressBar.Name = "player2_progressBar";
-            this.player2_progressBar.Size = new System.Drawing.Size(250, 38);
+            this.player2_progressBar.Size = new System.Drawing.Size(275, 22);
             this.player2_progressBar.Step = 1;
             this.player2_progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.player2_progressBar.TabIndex = 3;
@@ -99,35 +99,35 @@
             // 
             this.player1HP_label.AutoSize = true;
             this.player1HP_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player1HP_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.player1HP_label.Location = new System.Drawing.Point(161, 367);
+            this.player1HP_label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player1HP_label.Location = new System.Drawing.Point(149, 367);
             this.player1HP_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.player1HP_label.Name = "player1HP_label";
-            this.player1HP_label.Size = new System.Drawing.Size(64, 25);
+            this.player1HP_label.Size = new System.Drawing.Size(44, 26);
             this.player1HP_label.TabIndex = 4;
-            this.player1HP_label.Text = "label1";
+            this.player1HP_label.Text = "100";
             // 
             // player2HP_label
             // 
             this.player2HP_label.AutoSize = true;
             this.player2HP_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player2HP_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.player2HP_label.Location = new System.Drawing.Point(509, 367);
+            this.player2HP_label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player2HP_label.Location = new System.Drawing.Point(537, 367);
             this.player2HP_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.player2HP_label.Name = "player2HP_label";
-            this.player2HP_label.Size = new System.Drawing.Size(64, 25);
+            this.player2HP_label.Size = new System.Drawing.Size(44, 26);
             this.player2HP_label.TabIndex = 5;
-            this.player2HP_label.Text = "label1";
+            this.player2HP_label.Text = "100";
             // 
             // HP_label1
             // 
             this.HP_label1.AutoSize = true;
             this.HP_label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.HP_label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.HP_label1.Location = new System.Drawing.Point(102, 367);
+            this.HP_label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HP_label1.Location = new System.Drawing.Point(105, 367);
             this.HP_label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HP_label1.Name = "HP_label1";
-            this.HP_label1.Size = new System.Drawing.Size(45, 25);
+            this.HP_label1.Size = new System.Drawing.Size(48, 26);
             this.HP_label1.TabIndex = 6;
             this.HP_label1.Text = "HP:";
             // 
@@ -135,11 +135,11 @@
             // 
             this.HP_label2.AutoSize = true;
             this.HP_label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.HP_label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.HP_label2.Location = new System.Drawing.Point(446, 367);
+            this.HP_label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HP_label2.Location = new System.Drawing.Point(495, 367);
             this.HP_label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HP_label2.Name = "HP_label2";
-            this.HP_label2.Size = new System.Drawing.Size(45, 25);
+            this.HP_label2.Size = new System.Drawing.Size(48, 26);
             this.HP_label2.TabIndex = 7;
             this.HP_label2.Text = "HP:";
             // 
@@ -147,11 +147,11 @@
             // 
             this.player1Name_label.AutoSize = true;
             this.player1Name_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player1Name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.player1Name_label.Location = new System.Drawing.Point(161, 29);
-            this.player1Name_label.Margin = new System.Windows.Forms.Padding(104, 0, 504, 0);
+            this.player1Name_label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player1Name_label.Location = new System.Drawing.Point(129, 30);
+            this.player1Name_label.Margin = new System.Windows.Forms.Padding(114, 0, 554, 0);
             this.player1Name_label.Name = "player1Name_label";
-            this.player1Name_label.Size = new System.Drawing.Size(83, 25);
+            this.player1Name_label.Size = new System.Drawing.Size(99, 26);
             this.player1Name_label.TabIndex = 8;
             this.player1Name_label.Text = "Player 1";
             this.player1Name_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -160,11 +160,11 @@
             // 
             this.player2Name_label.AutoSize = true;
             this.player2Name_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player2Name_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.player2Name_label.Location = new System.Drawing.Point(509, 29);
+            this.player2Name_label.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player2Name_label.Location = new System.Drawing.Point(512, 30);
             this.player2Name_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.player2Name_label.Name = "player2Name_label";
-            this.player2Name_label.Size = new System.Drawing.Size(54, 25);
+            this.player2Name_label.Size = new System.Drawing.Size(51, 26);
             this.player2Name_label.TabIndex = 9;
             this.player2Name_label.Text = "CPU";
             this.player2Name_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -173,11 +173,11 @@
             // 
             this.player1Symb_label.AutoSize = true;
             this.player1Symb_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player1Symb_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player1Symb_label.Location = new System.Drawing.Point(113, 18);
-            this.player1Symb_label.Margin = new System.Windows.Forms.Padding(104, 0, 504, 0);
+            this.player1Symb_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.player1Symb_label.Location = new System.Drawing.Point(76, 19);
+            this.player1Symb_label.Margin = new System.Windows.Forms.Padding(114, 0, 554, 0);
             this.player1Symb_label.Name = "player1Symb_label";
-            this.player1Symb_label.Size = new System.Drawing.Size(38, 39);
+            this.player1Symb_label.Size = new System.Drawing.Size(39, 39);
             this.player1Symb_label.TabIndex = 10;
             this.player1Symb_label.Text = "⚔️";
             this.player1Symb_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -186,21 +186,21 @@
             // 
             this.player2Symb_label.AutoSize = true;
             this.player2Symb_label.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.player2Symb_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.player2Symb_label.Location = new System.Drawing.Point(465, 18);
-            this.player2Symb_label.Margin = new System.Windows.Forms.Padding(104, 0, 504, 0);
+            this.player2Symb_label.Font = new System.Drawing.Font("Stencil", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.player2Symb_label.Location = new System.Drawing.Point(464, 19);
+            this.player2Symb_label.Margin = new System.Windows.Forms.Padding(114, 0, 554, 0);
             this.player2Symb_label.Name = "player2Symb_label";
-            this.player2Symb_label.Size = new System.Drawing.Size(45, 39);
+            this.player2Symb_label.Size = new System.Drawing.Size(47, 40);
             this.player2Symb_label.TabIndex = 11;
             this.player2Symb_label.Text = "🛡️";
             this.player2Symb_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Fight
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(782, 403);
+            this.ClientSize = new System.Drawing.Size(717, 423);
             this.Controls.Add(this.player2Symb_label);
             this.Controls.Add(this.player1Symb_label);
             this.Controls.Add(this.player2Name_label);
@@ -213,7 +213,7 @@
             this.Controls.Add(this.player1_progressBar);
             this.Controls.Add(this.player2_pictureBox);
             this.Controls.Add(this.player1_pictureBox);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Location = new System.Drawing.Point(300, 40);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

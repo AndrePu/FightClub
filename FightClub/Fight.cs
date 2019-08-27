@@ -11,16 +11,16 @@ using Fighters;
 
 namespace FightClub
 {
-    internal delegate void ActionChoose();
+    internal delegate void ActionChoice();
 
     public partial class Fight : Form
     {
-        private readonly CyberAction actionForm;
-        private readonly Logging logging;
-
         const int hp = 100;
         const string botNickname = "CPU";
 
+        private readonly UserActionForm userActionForm;
+        private readonly Logging logging;
+        
         readonly Player human;
         readonly Player bot;
 
@@ -29,28 +29,52 @@ namespace FightClub
         public Fight(string humanNickname)
         {
             InitializeComponent();
-
-            player1Name_label.Text = humanNickname;
-            player2Name_label.Text = botNickname;
-
+            
             human = new Player(humanNickname, hp);
             bot = new Player(botNickname, hp);
 
             round = new Round(human, bot);
 
-            ActionChoose actionChoose = new ActionChoose(ActionChoose);
-            actionForm = new CyberAction(actionChoose);
-            actionForm.Show();
-
+            ActionChoice actionChoice = new ActionChoice(ActionChoosen);
+            userActionForm = new UserActionForm(actionChoice);
             logging = new Logging(humanNickname);
 
+            
             human.Block += logging.Write;
             human.Wound += logging.Write;
 
             bot.Block += logging.Write;
             bot.Wound += logging.Write;
 
+            userActionForm.Show();
             logging.Show();
+
+
+            SetControlsInfo();
+            StartNewRound();
+        }
+
+        private void SetControlsInfo()
+        {
+            player1Name_label.Text = human.Name;
+            player2Name_label.Text = botNickname;
+
+            if (round.Attacker == human)
+            {
+                player1Symb_label.Text = "🛡️";
+                player2Symb_label.Text = "⚔️";
+            }
+            else
+            {
+                player1Symb_label.Text = "⚔️";
+                player2Symb_label.Text = "🛡️";
+            }
+        }
+
+
+
+        private void UpdatePlayersHPInfo()
+        {
 
             player1_progressBar.Value = human.Hp;
             player2_progressBar.Value = bot.Hp;
@@ -58,55 +82,73 @@ namespace FightClub
             player1HP_label.Text = human.Hp.ToString();
             player2HP_label.Text = bot.Hp.ToString();
 
-            StartNewRound();
+        }
+
+        private void UpdatePlayersRolesInfo()
+        {
+            string temp = player1Symb_label.Text;
+            player1Symb_label.Text = player2Symb_label.Text;
+
+            player2Symb_label.Text = temp;
         }
 
         private void StartNewRound()
         {
+            UpdatePlayersHPInfo();
 
-            if (round.Attacker == human)
+            if (human.Hp == 0 || bot.Hp == 0)
             {
-                actionForm.ActionKind = KindOfAction.Attack;
+                GameOver((human.Hp == 0) ? human.Name : bot.Name);
+                return;
             }
             else
             {
-                actionForm.ActionKind = KindOfAction.Defense;
+                UpdatePlayersRolesInfo();
             }
+
+            logging.Write($"Round {round.RoundNumber}!");
+
+            if (round.Attacker == human)
+            {
+                userActionForm.UserAction = UserAction.Attack;
+                logging.Write($"{human.Name} is attacking now.");
+            }
+            else
+            {
+                userActionForm.UserAction = UserAction.Defense;
+                logging.Write($"{botNickname} is attacking now.");
+            }
+            
+            userActionForm.Enabled = true;
         }
 
-        private void ActionChoose()
+
+        private void ActionChoosen()
         {
-            CyberAttack botAction = GenerateCPUAction();
+            userActionForm.Enabled = false;
+
+            CyberAttack botAction = Bot.GenerateCPUAction();
             int damage = GenerateDamage();
-            if (actionForm.ActionKind == KindOfAction.Defense)
+
+            if (userActionForm.UserAction == UserAction.Defense)
             {
-                human.SetBlock(actionForm.cyberAction);
+                human.SetBlock(userActionForm.cyberAction);
                 human.GetHit(botAction, damage);
             }
             else
             {
                 bot.SetBlock(botAction);
-                bot.GetHit(actionForm.cyberAction, damage);
+                bot.GetHit(userActionForm.cyberAction, damage);
             }
+                        
+            round.NextRound();
+            StartNewRound();
+        }
 
-            player1_progressBar.Value = human.Hp;
-            player2_progressBar.Value = bot.Hp;
-
-            player1HP_label.Text = human.Hp.ToString();
-            player2HP_label.Text = bot.Hp.ToString();
-
-            actionForm.Hide();
-            if (bot.Hp != 0 && human.Hp != 0)
-            {
-                round.NextRound();
-                actionForm.Show();
-                StartNewRound();
-            }
-            else
-            {
-                MessageBox.Show("Game over!", "Fight over", MessageBoxButtons.OK);
-                this.Close();
-            }
+        private void GameOver(string winner_name)
+        {
+            MessageBox.Show($"Game over! {winner_name} has won!", "Fight over", MessageBoxButtons.OK);
+            this.Close();
         }
 
         private int GenerateDamage()
@@ -114,13 +156,6 @@ namespace FightClub
             Random random = new Random();
             return random.Next(5, 20);
 
-        }
-
-        private CyberAttack GenerateCPUAction()
-        {
-            var random = new Random();
-
-            return (CyberAttack)random.Next(0, 2);
         }
 
         private void Fight_FormClosed(object sender, FormClosedEventArgs e)
