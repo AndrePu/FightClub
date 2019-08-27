@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Fighters;
 
-namespace FightClub
+namespace Fighting
 {
-    internal class Round
+    public class Round
     {
         public Player Defender { get; private set; }
         public Player Attacker { get; private set; }

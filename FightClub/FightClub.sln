@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightClub", "FightClub.csproj", "{58552D45-AD26-4321-AE53-F555792C71D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fighters", "..\Fighters\Fighters.csproj", "{D9DC434F-522F-4520-8D64-071890248DC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fighting", "..\Fighters\Fighting.csproj", "{D9DC434F-522F-4520-8D64-071890248DC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

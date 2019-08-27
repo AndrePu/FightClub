@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fighters
+namespace Fighting
 {
     public delegate void Wound(string player_name, int hp);
     public delegate void Block(string player_name, int hp);

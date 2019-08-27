@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Round.cs" />
     <Compile Include="Enums\CyberAttack.cs" />
     <Compile Include="Interfaces\IAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
