@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightClub", "FightClub.csproj", "{58552D45-AD26-4321-AE53-F555792C71D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fighters", "..\Fighters\Fighters.csproj", "{D9DC434F-522F-4520-8D64-071890248DC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58552D45-AD26-4321-AE53-F555792C71D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58552D45-AD26-4321-AE53-F555792C71D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58552D45-AD26-4321-AE53-F555792C71D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58552D45-AD26-4321-AE53-F555792C71D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DC434F-522F-4520-8D64-071890248DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DC434F-522F-4520-8D64-071890248DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DC434F-522F-4520-8D64-071890248DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DC434F-522F-4520-8D64-071890248DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47988CFD-D520-49D7-B0FC-BEEA28E299C9}
+	EndGlobalSection
+EndGlobal
