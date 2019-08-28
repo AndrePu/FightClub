@@ -14,7 +14,7 @@ namespace FightClub
     public partial class UserActionForm : Form
     {
         private UserAction userAction;
-        private ActionChoice actionChosen;
+        private Action actionChosen;
         public UserAction UserAction
         {
             get
@@ -36,7 +36,7 @@ namespace FightClub
         }
         public CyberAttack cyberAction { get; private set; }
 
-        internal UserActionForm(ActionChoice actionChoose)
+        internal UserActionForm(Action actionChoose)
         {
             InitializeComponent();
 

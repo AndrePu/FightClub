@@ -11,7 +11,6 @@ using Fighting;
 
 namespace FightClub
 {
-    internal delegate void ActionChoice();
 
     public partial class Fight : Form
     {
@@ -35,7 +34,7 @@ namespace FightClub
 
             round = new Round(human, bot);
 
-            ActionChoice actionChoice = new ActionChoice(ActionChoosen);
+            Action actionChoice = new Action(ActionChoosen);
             userActionForm = new UserActionForm(actionChoice);
             logging = new Logging(humanNickname);
 
