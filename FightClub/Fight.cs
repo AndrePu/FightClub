@@ -97,7 +97,7 @@ namespace FightClub
 
             if (human.Hp == 0 || bot.Hp == 0)
             {
-                GameOver((human.Hp == 0) ? human.Name : bot.Name);
+                GameOver((human.Hp == 0) ? bot.Name : human.Name);
                 return;
             }
             else
